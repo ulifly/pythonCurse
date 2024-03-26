@@ -19,3 +19,28 @@ def funcion_a_decorar():
     print("Esta es la funcion a decorar")
 
 funcion_a_decorar()
+
+
+"""
+Tambien podemos decorar funciones que reciben parametros
+"""
+
+def funcion_a(funcion_b):
+    def funcion_c(*args, **kwargs):
+        print("---> antes del llamado")
+
+        operacion = funcion_b(*args, **kwargs)
+
+        print("---> despues del llamado")
+
+        return operacion
+
+    return funcion_c
+
+
+@funcion_a
+def suma(num1 , num2):
+    return (num1 + num2)
+
+resultado = suma(10, 20)
+print(resultado)
