@@ -10,5 +10,9 @@ tener como primer parámetro la referencia a la clase, que se suele llamar cls
 class Circulo:
     pi = 3.14159265
 
+    @classmethod # Decorador para indicar que es un método de clase
     def area(cls, radio):
         return cls.pi * radio ** 2
+    
+resultado = Circulo.area(5)
+print(resultado) 
