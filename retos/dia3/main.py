@@ -1,6 +1,4 @@
 """
-
-
 para este tercer reto lo que haremos será añadir 2 nuevas funcionalidades 
 a nuestro programa de registro de usuarios.
 
